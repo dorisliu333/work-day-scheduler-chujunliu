@@ -5,7 +5,7 @@ var descriptionEl = $(".description");
 
 
 function checkTime() {
-    var today = moment().format("ha:mm:ss, dddd, MMMM Do");
+    var today = moment().format("ha, dddd, MMMM Do");
     currentDay.text(today);
     timeBlockEl.map(item => {
         const timeConvert = moment(timeBlockEl[item].children[0].innerText, "ha").format('HH:mm');
