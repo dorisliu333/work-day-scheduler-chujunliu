@@ -2,28 +2,26 @@ var currentDay = $("#currentDay");
 var timeBlockEl = $(".time-block");
 var descriptionEl = $(".description");
 
-
-
 function checkTime() {
-    var today = moment().format("ha, dddd, MMMM Do");
+    var today = moment().format("h:mma, dddd, MMMM Do");
     currentDay.text(today);
     timeBlockEl.map(item => {
         const timeConvert = moment(timeBlockEl[item].children[0].innerText, "ha").format('HH:mm');
         var difference = Number(moment().format('HH:mm').substring(0, 2)) - Number(timeConvert.substring(0, 2));
         if (difference > 0) {
-            timeBlockEl[item].children[1].style.setProperty("background", "grey")
+            timeBlockEl[item].children[1].setAttribute("class", "col-lg-10 past")
         } else if (difference === 0) {
-            timeBlockEl[item].children[1].style.setProperty("background", "red")
+            timeBlockEl[item].children[1].setAttribute("class", "col-lg-10 present")
         } else {
-            timeBlockEl[item].children[1].style.setProperty("background", "yellow")
+            timeBlockEl[item].children[1].setAttribute("class", "col-lg-10 future")
         }
     })
 }
 
 function printDescription() {
-    descriptionEl.text("Appointment added to local storage");
+    descriptionEl.css("display","block")
     setInterval(function () {
-        descriptionEl.text("")
+        descriptionEl.css("display","none")
     }, 3000);
 }
 
