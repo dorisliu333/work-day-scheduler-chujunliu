@@ -14,5 +14,5 @@
   <img src="./images/04.png">
 * if user refreshs the page, the saved events persist
 
-## Deployed Repository 
+## Deployed URL
 https://dorisliu333.github.io/work-day-scheduler-chujunliu/
