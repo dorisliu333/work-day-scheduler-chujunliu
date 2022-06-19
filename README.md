@@ -5,7 +5,7 @@
 ## Acceptance Criteria
 
 * when user opens the planner, the current day is displayed at the top of the calendar
-  <img src="./images/01.png>
+  <img src="./images/01.png">
 * when user scrolls down, will be presented with timeblocks for standard business hours, each timeblock is color coded to indicate whether it is in the past, present, or future
   <img src="./images/02.png">
 * user can enter an event to the timeblocks
